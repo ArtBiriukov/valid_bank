@@ -1,0 +1,36 @@
+.input {
+  border: none;
+  border-bottom: 1px solid $disable-text_color;
+  padding: 5px 0;
+
+  outline: none;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: $title_color;
+
+  transition: all 0.3s ease-in-out;
+
+  //Курсор
+  // caret-color: $default_color;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 1px;
+
+    color: $disable-text_color;
+  }
+
+  &:hover,
+  &.inputing {
+    border-color: $hover_color;
+  }
+
+  &.active {
+    border-color: $second-text_color;
+  }
+}

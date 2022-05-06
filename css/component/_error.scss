@@ -1,0 +1,19 @@
+.error {
+  color: $error_color;
+
+  &.input {
+    color: $error_color;
+    border-color: $error_color;
+  }
+
+  &__text {
+    margin-top: 4px;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+
+    color: $error_color;
+  }
+}

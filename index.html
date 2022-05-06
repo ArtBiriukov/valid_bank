@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank card</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form method="post" class="card container" id="form">
+      <div class="card__content">
+        <img class="card__logo" src="img/bank logo.svg" alt="Logo" title="logo" />
+
+        <div class="card__item item">
+          <label class="item__title" data-title="Номер карты">Номер карты</label>
+          <input type="text" name="number_card" class="item__input input" placeholder="1234 5678 1234 5678" />
+        </div>
+
+        <div class="card__item item">
+          <label class="item__title" data-title="Месяц / год">Месяц / год</label>
+          <input type="text" name="date" class="item__input input" placeholder="ММ / ГГ" />
+        </div>
+
+        <div class="card__item item">
+          <div class="item__top" data-title="CVV / CVC">
+            <label class="item__title">CVV / CVC</label>
+            <div class="item__info info">
+              <svg class="info__icon" width="7" height="11" viewBox="0 0 7 11" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.978516 3.34766H2.47021C2.521 2.56055 3.04785 2.05908 3.8667 2.05908C4.6665 2.05908 5.19971 2.54785 5.19971 3.2207C5.19971 3.84912 4.93311 4.19189 4.146 4.66797C3.27002 5.18213 2.90186 5.75342 2.95898 6.69287L2.96533 7.14355H4.43799V6.77539C4.43799 6.14062 4.67285 5.81055 5.50439 5.32812C6.36768 4.81396 6.8501 4.13477 6.8501 3.16357C6.8501 1.76709 5.68848 0.76416 3.94922 0.76416C2.06396 0.76416 1.0293 1.85596 0.978516 3.34766ZM3.7207 10.127C4.23486 10.127 4.64111 9.72705 4.64111 9.22559C4.64111 8.72412 4.23486 8.33057 3.7207 8.33057C3.20654 8.33057 2.79395 8.72412 2.79395 9.22559C2.79395 9.72705 3.20654 10.127 3.7207 10.127Z"
+                />
+              </svg>
+
+              <span class="info__tooltip">Три цифры с обратной стороны карты</span>
+            </div>
+          </div>
+          <input type="password" name="info" class="item__input input" placeholder="123" />
+        </div>
+      </div>
+
+      <input class="checkbox savecard" type="checkbox" name="savecard" id="checkbox" checked />
+      <label class="card__savecard" for="checkbox"> Сохранить карту для следующих покупок </label>
+
+      <button class="card__btn btn-reset btn" disabled>Отправить</button>
+
+      <p class="card__text">
+        Нажимая на кнопку «‎Перевести»‎, вы соглашаетесь с
+        <a class="card__text-link" href="/">условиями оферты</a>
+      </p>
+    </form>
+
+    <footer class="footer">
+      <div class="footer__content container">
+        <div class="partners">
+          <img src="img/visa-logo.svg" alt="VISA" title="VISA" />
+          <img src="img/masterCard-logo.svg" alt="Master Card" title="Master Card" />
+          <img src="img/mir-logo.svg" alt="MIR" title="МИР" />
+        </div>
+
+        <div class="secure">
+          <img class="secure__img" src="img/ic_lock.svg" alt="lock" />
+          <p class="footer__text secure__text">Данные банковской карты будут переданы в зашифрованном виде</p>
+        </div>
+
+        <div class="order">
+          <p class="footer__text order__text">Заказ №<span class="order__text-number">112480</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="confirm">
+      <div class="confirm__body">
+        <h3 class="confirm__title">Проверьте введенные данные</h3>
+        <ul class="confirm__list"></ul>
+
+        <div class="confirm__controls">
+          <button class="btn btn-reset confirm__btn" id="cancel">Есть ошибка</button>
+          <button class="btn btn-reset confirm__btn" id="success">Все верно</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/valid.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
